@@ -1,0 +1,3 @@
+com\mobileAutomationFramework\base\BaseDriverClass.class
+com\mobileAutomationFramework\testcases\Signup.class
+com\mobileAutomationFramework\utilities\ExtentManager.class

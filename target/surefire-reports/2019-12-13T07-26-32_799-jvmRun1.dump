@@ -1,0 +1,134 @@
+# Created at 2019-12-13T07:27:06.782
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (51400@Hasneet3674):
+"Okio Watchdog" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at okio.AsyncTimeout.awaitTimeout(AsyncTimeout.java:361)
+        at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.java:312)
+
+"OkHttp ConnectionPool" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:460)
+        at okhttp3.ConnectionPool$1.run(ConnectionPool.java:67)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"UrlChecker-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+        at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+        at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+        at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:178)
+        at org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:546)
+        at org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:68)
+        at org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:295)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:467)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:479)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:432)
+        at java.lang.Thread.run(Thread.java:748)
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"Forwarding quit on session ad5b0d1e-ce51-429d-a25e-19342501619e to remote" 
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:171)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at okio.Okio$2.read(Okio.java:140)
+        at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+        at okio.RealBufferedSource.indexOf(RealBufferedSource.java:355)
+        at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:227)
+        at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:215)
+        at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+        at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+        at org.openqa.selenium.remote.internal.OkHttpClient$Factory$1.lambda$createClient$1(OkHttpClient.java:152)
+        at org.openqa.selenium.remote.internal.OkHttpClient$Factory$1$$Lambda$44/1058634310.intercept(Unknown Source)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+        at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+        at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+        at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+        at okhttp3.RealCall.execute(RealCall.java:77)
+        at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+        at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+        at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+        at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+        at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
+        at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+        at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+        at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+        at com.mobileAutomationFramework.base.BaseDriverClass.stopServer(BaseDriverClass.java:107)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+        at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+        at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+        at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+        at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+        at org.testng.TestRunner.afterRun(TestRunner.java:853)
+        at org.testng.TestRunner.run(TestRunner.java:594)
+        at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+        at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+        at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+        at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+        at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+        at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+        at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+        at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+        at org.testng.TestNG.runSuites(TestNG.java:1032)
+        at org.testng.TestNG.run(TestNG.java:1000)
+        at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+        at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+        at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+
+
+

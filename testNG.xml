@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="example suite 1" verbose="1" >
+  <test name="Regression suite 1" >
+    <classes>
+      <class name="com.mobileAutomationFramework.testcases.NavigationBarMenu"/>
+    </classes>
+ </test>
+</suite>

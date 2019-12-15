@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
+  <test thread-count="5" name="Regression suite 1(failed)">
+    <classes>
+      <class name="com.mobileAutomationFramework.testcases.NavigationBarMenu">
+        <methods>
+          <include name="stopServer"/>
+          <include name="initiate"/>
+          <include name="validateNavigationMenu"/>
+        </methods>
+      </class> <!-- com.mobileAutomationFramework.testcases.NavigationBarMenu -->
+    </classes>
+  </test> <!-- Regression suite 1(failed) -->
+</suite> <!-- Failed suite [example suite 1] -->
